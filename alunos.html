@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blibioteca Escolar</title>
+
+    <!-- compatibilidade-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--bootstap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+
+    <!--Alinhamento do elementos dentro da página principal-->
+    <link rel="stylesheet" href="css/browser_components/dist/css/bootstrap.min.css">
+    <!-- <script src="https://kit.fontawesome.com/95d2011139.js" crossorigin="anonymous"></script> -->
+
+    <!-- Icones para nossos elementos de acompanhamento -->
+    <!-- <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> -->
+
+    <!--Efeito dos elementos que irão referenciar o acompanhamento sistema-->
+    <!-- <link rel="stylesheet" href="css/alt/adminlte.min.css"> -->
+
+    <!-- ícone de imagem na guia do navegador -->
+    <link rel="icon" href="img/livro.ico" />
+    <!-- link de acesso a folha css (main.css)-->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- link de acesso a folha css (crud.css)-->
+    <link rel="stylesheet" href="css/crud.css">
+    <!-- link de acesso a folha css (modal.css)-->
+    <link rel="stylesheet" href="css/modal.css">
+
 </head>
 <body>
     <div class="corpo">
@@ -11,40 +38,52 @@
         <nav>
             <div class="menu-sid">
                 <i class="bi bi-list sidebar-toggle"></i>
-            </div><!--menu sid-->
+            </div>
             <div class="div-logo-name">
-                <span class="logo_name">Biblioteca</span>
-            </div><!--logo-name-->
+                <span class="logo-name">Biblioteca</span>
+            </div>
 
             <div class="menu-items">
-                <ul class="nave-links">
-                    <li><a href="dashboard.html">
-                        <i class="bi bi-hause"></i>
-                        <span class="link-name">Dashboard</span>
-                    </a></li>
-                    <li><a href="alunos.html">
-                        <i class="bi bi-person-vcard"></i>
-                        <span class="link-name">Funcionários</span>
-                    </a></li>
-                    <li><a href="Funcionarios.html">
-                        <i class="bi bi-person-vcard"></i>
-                        <span class="link-name">Editoras</span>
-                    </a></li>
-                    <li><a href="Editoras.html">
-                        <i class="bi bi-clipboard-data"></i>
-                        <span class="link-name">Editoras</span>
-                    </a></li>
-                    <li><a href="Livros.html">
-                        <i class="bi bi-clipboard-data"></i>
-                        <span class="link-name">Livros</span>
-                    </a></li>
-                    <li><a href="Emprestimo.html">
-                        <i class="bi bi-person-workspace"></i>
-                        <span class="link-name">Emprestimo</span>
-                    </a></li>
+                <ul class="nav-links" style="
+    padding-left: 0px;">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bi bi-house"></i>
+                            <span class="link-name">Dashboard</span>
+                        </a>
                     </li>
-                </ul><!--nav-links-->
-            </div><!--menu-items-->
+                    <li>
+                        <a href="alunos.html">
+                            <i class="bi bi-person-vcard"></i>
+                            <span class="link-name">Alunos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="funcionarios.html">
+                            <i class="bi bi-person-vcard"></i>
+                            <span class="link-name">Funcionários</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="editoras.html">
+                            <i class="bi bi-clipboard-data"></i>
+                            <span class="link-name">Editoras</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="livros.html">
+                            <i class="bi bi-clipboard-data"></i>
+                            <span class="link-name">Livros</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="emprestimos.html">
+                            <i class="bi bi-person-workspace"></i>
+                            <span class="link-name">Empréstimo</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <section class="dashboard">
             <div class="top">
@@ -87,17 +126,17 @@
                                 <i class="bi bi-person-rolodex"></i>
                                 <span class="text">Alunos</span>
                             </div>
-                            <div class="seducServer" style="white-space: nowrap;">
+                            <div class="seducServer breadcrumb" style="white-space: nowrap; background: #00000000;">
                                 <li class="breadcrumb-item">
                                     <a style="text-decoration: none !important; color: black; font-size: 12px; margin-left: 2%;" href="dashboard.html">Biblioteca Escolar</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a style="text-decoration: none !important; color: rgb(99, 99, 99); font-size: 12px; margin-left: 2%;" href="alunos.html">&nbsp; Alunos</a>
+                                    <a style="text-decoration: none !important; color: rgb(99, 99, 99); font-size: 12px; margin-left: 2%;" href="alunos.html">Alunos</a>
                                 </li>
                             </div>
                         </div>
                         <div class="lupa-grid">
-                            <button type="button" class="button blue mobile" id="cadastrarAluno">Cadastrar Novo Aluno</button>
+                            <button type="button" class="btn btn-primary" id="cadastrarAluno">Cadastrar Novo Aluno</button>
                         </div>
                         <br>
                         <table id="tableAluno" class="records">
@@ -113,7 +152,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+                                <tr>
+                                    <td>Carlos</td>
+                                    <td>2023</td>
+                                    <td>Informática</td>
+                                    <td>1</td>
+                                    <td>86528462846</td>
+                                    <td>carlos@gmail.com</td>
+                                </tr>
                             </tbody>
                         </table>
                         <!-- Modal Apagar -->
@@ -123,12 +169,12 @@
                                     <h2>Excluir Aluno</h2>
                                     <span class="modal-close" id="modalClose2">&#10006;</span>
                                 </header>
-                                <div id="avisoDelete">
-    
+                                <div id="avisoDelete" class="modal-body">
+                                    <p>Deseja realmente deletar?</p>
                                 </div>
                                 <footer class="modal-footer">
-                                    <button id="apagar" class="button red">Apagar</button>
-                                    <button id="cancelar2" class="button blue">Cancelar</button>
+                                    <button id="apagar" class="btn btn-danger">Apagar</button>
+                                    <button id="cancelar2" class="btn btn-primary">Cancelar</button>
                                 </footer> 
                             </div>
                         </div>
@@ -144,7 +190,7 @@
                                     <input type="number" id="matricula" class="modal-field" placeholder="Matricula do Aluno" required>
                                     <input type="number" id="telefone" class="modal-field" placeholder="Telefone do Aluno" required>
                                     <input type="number" id="celular" class="modal-field" placeholder="Celular do Aluno" required>
-                                    <input type="number" id="email" class="modal-field" placeholder="E-mail do Aluno" required>
+                                    <input type="email" id="email" class="modal-field" placeholder="E-mail do Aluno" required>
                                     <input type="text" id="rua" class="modal-field" placeholder="Endereço do Aluno" required>
                                     <input type="number" id="numero" data-index="new" class="modal-field" placeholder="Número de Residência" required>
                                     <input type="text" id="complemento" class="modal-field" placeholder="Complemento Endereço" required>
@@ -153,9 +199,9 @@
                                     <input type="text" id="curso" data-index="new" class="modal-field" placeholder="Curso do Aluno" required>
                                     <input type="number" id="serie" class="modal-field" placeholder="Série do Aluno" required>
                                 </form>
-                                <footer>
-                                    <button id="salvar" class="button green">Salvar</button>
-                                    <button id="cancelar" class="button blue">Cancelar</button>
+                                <footer class="modal-footer">
+                                    <button id="salvar" class="btn btn-success">Salvar</button>
+                                    <button id="cancelar" class="btn btn-primary">Cancelar</button>
                                 </footer>
                             </div>
                         </div>
@@ -164,5 +210,9 @@
             </div>
         </section>
     </div>
+    <!-- Incluir JS do Bootstrap e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

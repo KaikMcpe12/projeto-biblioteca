@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Escolar</title>
+</head>
+<body>
+    <div class="corpo">
+        <nav>
+
+            <div class="menu-sid">
+                <i class="bi bi-list sidebar-toggle"></i>
+            </div><!--Menu sid-->
+
+            <div class="div-logo-name">
+                <span class="logo_name">Biblioteca</span>
+            </div><!--Logo name-->
+
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li><a href="Dahsboard.html">
+                        <i class="bi bi-house"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                    
+                    <li><a href="alunos.html">
+                        <i class="bi bi-person-vcard"></i>
+                            <span class="link-name">Alunos</span>
+                    </a></li>
+
+                    <li><a href="funcionarios.html">
+                        <i class="bi bi-person-vcard"></i>
+                            <span class="link-name">Funcionários</span>
+                    </a></li>
+
+                    <li><a href="editoras.html">
+                        <i class="bi bi-Clipboard-data"></i>
+                            <span class="link-name">editoras</span>
+                    </a></li>
+
+                    <li><a href="livros.html">
+                        <i class="bi bi-Clipboard-data"></i>
+                            <span class="link-name">Livros</span>
+                    </a></li>
+
+                    <li><a href="Empréstimos.html">
+                        <i class="bi bi-person-workspace"></i>
+                            <span class="link-name">Empréstimos</span>
+                    </a></li>
+                </ul><!--Nav-links-->
+            </div><!--menu-items-->
+        </nav>
+        <section class="Dahsboard">
+            <div class="top">
+                <i class="bi bi-list sidebar-toggle2"></i>
+
+                <div class="logo-name">
+                    <h1 class="seduc-logo">Biblioteca Escolar</h1>
+                </div><!--logo-name-->
+                <div class="actionimg">
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/872993216732171904/AF4CDA9B96E40952AE19ACCF8DE0174807CD2CC2/?imw=1024&imh=454&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="">
+                    </div>
+                    <div class="menu">
+                        <h3>Josemare</h3>
+                        <ul>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-person"></i></span>
+                                <a href="#">Perfil</a>
+                            </li>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-question-circle"></i></span>
+                                <a href="#">Ajuda</a>
+                            </li>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-gear"></i></span>
+                                <a href="#">Configurações</a>
+                            </li>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-box-arrow-right"></i></span>
+                                <a href="#">Saída</a>
+                            </li>
+                        </ul>
+                    </div><!--menu-->
+                </div><!--actionimg-->
+            </div><!--top-->
+            <div class="corpo-da-pag">
+                <div class="scroll">
+                    <div class="activity">
+                        <div class="overview">
+                            <div class="title">
+                                <i class="bi bi-person-rolodex"></i>
+                                <span class="text">Emprestimos</span>
+                            </div><!--title-->
+                            <div class="wdaServer" style="white-space: nowrap;">
+                                <li class="breakcrumb-item"><a
+                                     style="text-decoration: none !important; color: black; font-size: 12px; margin-left: 2%;"
+                                     href="Dahsboard.html">Biblioteca Escolar</a></li>
+
+                                <li class="breakcrumb-item"><a
+                                    style="text-decoration: none !important; color: rgb(99, 99, 99); font-size: 12px; margin-left: 2%;"
+                                    href="Empréstimos.html">&nbsp> Empréstimos</a></li>
+                            </div>
+                        </div><!--overview-->
+                        <div id="lupa-grid">
+                            <button type="button" class="button blue mobile" id="cadastrarCliente">Novo Emprestimo</button>
+                        </div>
+                        </br>
+
+                        <table id="tableEmprestimo" class="records">
+                            <thead>
+                                <tr>
+                                    <th>Código Empréstimo</th>
+                                    <th>Nome do Usuário</th>
+                                    <th>Livro alugado</th>
+                                    <th>Data do Empréstimo</th>
+                                    <th>data da Devolução</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div class="modal" id="modal">
+                            <div class="modal-content">
+                                <header class="modal-header">
+                                    <h2>Novo Empréstimo</h2>
+                                    <span class="modal-close" id="modal-close">&#10006;</span>
+                                </header>
+                                <form id="form" class="modal-form">
+                                <label for="m-livro-alug">Livro:</label></br>
+                                <select id="m-livro-alug">
+                                <option value="">Selecione o Livro</option>
+                                </select></br>
+                                <label for="m-usuario">Usuário</label></br>
+                                <select id="m-usuario">
+                                    <option value="">selecione Usuário:</option>
+                                </select></br>
+                                <label for="m-data-aluguel">Data do Empréstimo</label>
+                                <input id="m-data-aluguel" type="date" required/>
+                                <label for="m-prev-data">Previsão de Devolução</label>
+                                <input id="m-prev-data" type="date" required/>
+                                </form>
+                                <footer class="modal-footer">
+                                    <button id="salvar" class="button green">Salvar</button>
+                                    <button id="cancelar" class="button blue"><a href="Empréstimos.html">cancelar</a></button>
+                                </footer>
+                            </div>
+                        </div>
+                    </div><!--activity-->
+                </div><!--scroll-->
+            </div><!--corpo da pagina-->
+        </section>
+    </div><!--corpo-->
+</body>
+</html>
